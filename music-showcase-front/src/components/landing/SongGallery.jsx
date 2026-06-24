@@ -70,7 +70,7 @@ const GalleryCard = ({ song, playingSongId, setPlayingSongId }) => {
       <h3 className="font-bold text-gray-900 truncate text-sm">{song.title}</h3>
       <div className="flex justify-between items-center mt-2 text-xs text-gray-400">
         <span>#{song.sequenceIndex}</span>
-        <span className="text-gray-600 font-medium"> {song.likes}</span>
+        <span className="text-gray-600 font-medium">Likes {song.likes}</span>
       </div>
     </div>
   );

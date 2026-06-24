@@ -12,6 +12,7 @@ export default function Landing() {
   const [playingSongId, setPlayingSongId] = useState(null);
   const [songs, setSongs] = useState([]);
   const [viewMode, setViewMode] = useState('table');
+  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8080";
 
   useEffect(() => {
     setPage(1);
@@ -23,7 +24,7 @@ export default function Landing() {
 
     const fetchSongs = async () => {
       try {
-        const url = `http://localhost:8080/showcase?seed=${seed}&page=${page}&likes=${likes}&lang=${lang}`;
+        const url = `${API_URL}/showcase?seed=${seed}&page=${page}&likes=${likes}&lang=${lang}`;
         const response = await fetch(url);
         const data = await response.json();
         
