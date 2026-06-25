@@ -81,7 +81,7 @@ export default function SongGallery({ songs, playingSongId, setPlayingSongId }) 
     <div className="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
       {songs.map((song) => (
         <GalleryCard 
-          key={`${song.sequenceIndex}-${song.trackSeed}`} 
+          key={song.id || song.sequenceIndex}
           song={song} 
           playingSongId={playingSongId}
           setPlayingSongId={setPlayingSongId}
