@@ -81,15 +81,10 @@ export default function GalleryCard({ song, playingSongId, setPlayingSongId }) {
       <div className="p-4 flex-1 flex flex-col justify-between">
         <div>
           <h3 className="font-bold text-gray-900 text-base truncate">{song.title}</h3>
-          <p className="text-xs text-gray-400 mt-1 italic line-clamp-2">
-            {song.reviewText || "No description available for this track."}
-          </p>
         </div>
 
         <div className="flex items-center justify-between mt-4 pt-2 border-t border-gray-100 text-xs">
-          <span className="text-gray-500 font-semibold flex items-center gap-1">
-            {song.likes}
-          </span>
+          <span className="text-gray-500 font-semibold flex items-center gap-1">Likes {song.likes}</span>
           {isPlaying && (
             <span className="flex gap-0.5 items-end h-3">
               <span className="w-0.5 h-3 bg-blue-500 animate-[bounce_1s_infinite_100ms]"></span>
